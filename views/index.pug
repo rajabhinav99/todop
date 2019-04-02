@@ -1,0 +1,20 @@
+extends layout
+block content
+    p Todo
+    table(border='1')
+        tr
+            th Action
+            th Status
+            th(colspan='2') Function
+            each data, i in todoData
+                tr
+                    td=data.action 
+                    td=data.status 
+                    td
+                        a(href="/searchtodo/" + data._id) UPDATE
+                    td
+                        a(href="/deletetodo/" + data._id) Delete
+    h1 #{title}
+ 
+    a(href='/add') Add Action 
+  

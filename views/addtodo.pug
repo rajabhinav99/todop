@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Add Task
+  table(border='1')
+  form(method='post',action='/todo/adddata')
+   
+   #form.group
+    lable Action :
+    input.form-control(type="text",name="action")
+   #form.group
+    lable Status:
+    input.form-control(type="text",name="status")
+    br
+    input.btn.btn-primary(type="submit",value="Add todo")

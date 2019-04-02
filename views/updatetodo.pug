@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Edit Action
+  table(border='1')
+  form(method='post',action='/todo/updatedata/'+data._id)
+   #form.group
+    lable Action :
+    input.form-control(type="text",name="action",value=data.action)
+   #form.group
+    lable Status:
+    input.form-control(type="text",name="status",value=data.status)
+    br
+    input.btn.btn-primary(type="submit",value="Update todo")
